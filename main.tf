@@ -1,4 +1,4 @@
-#simple file resource
-resource "local-file" "tf_example1" {
-  filename = "01_basics/example1.txt"
+resource "local_file" "tf_example1" {
+  filename = "/home/techgirli/Downloads/terraform/01-basics/tf_example1.txt"
+  content  = "Hey, this is the terraform course!"
 }
