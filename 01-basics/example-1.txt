@@ -1,1 +1,0 @@
-Hey, this is the terraform course!. Miracle is a good learner.
