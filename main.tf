@@ -9,6 +9,6 @@ resource "local_file" "tf_example2" {
 }
 
 resource "local_sensitive_file" "tf_sensitive_example" {
-  filename = "/home/techgirli/Downloads/terraform/01-basics/sensitive_example.txt"
+  filename = "/home/techgirli/Downloads/terraform/01-basics/sensitive_example.md"
   content  = "This is a sensitive file content. Handle with care!"
 }
