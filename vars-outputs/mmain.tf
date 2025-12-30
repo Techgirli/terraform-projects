@@ -24,3 +24,11 @@ resource "local_file" "tf_example3" {
   filename = "${path.module}/${var.filename-3}.md"
   content  = "Hey, this is the terraform course!. Miracle is a good learner."
 }
+
+locals {
+  base_path = "${path.module}/files"
+}
+resource "local_file" "tf_example4" {
+  filename = "${local.base_path}/tf_example.md"
+  content  = "Hey, this is the terraform course!. Miracle is a good learner."
+}
