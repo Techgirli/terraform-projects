@@ -12,6 +12,7 @@ provider "local" {
 resource "local_file" "tf_example1" {
   filename = "${path.module}/${var.filename-1}.demo"
   content  = "Hey, this is the terraform course!. Miracle is a good learner."
+  count    = var.count_num
 }
 
 resource "local_file" "tf_example2" {
