@@ -32,3 +32,17 @@ resource "local_file" "tf_example4" {
   filename = "${local.base_path}/tf_example.md"
   content  = "Hey, this is the terraform course!. Miracle is a good learner."
 }
+
+locals {
+  environment = "dev" # dev, staging, prod
+  upper_case  = upper(environment)
+  base_path   = "${path.module}/configs/${local.upper_case}"
+}
+
+resource "local_file" "service_configs" {
+  filename = "${local.base_path}/server.sh"
+  content  = <<EOT
+  environment = ${local.environment}
+  port=3000
+  EOT
+}
