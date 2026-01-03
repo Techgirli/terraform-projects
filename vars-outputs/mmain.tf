@@ -39,5 +39,6 @@ resource "local_file" "service_configs_3" {
 
 # outputs
 output "filename_1" {
-  value = local_file.service_configs.filename
+  value     = local_file.service_configs.filename
+  sensitive = true
 }
