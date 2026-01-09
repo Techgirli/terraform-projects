@@ -19,3 +19,4 @@ resource "aws_s3_object" "tf_s3_object" {
   # etag = "${md5(file("path/to/file"))}"
   etag = filemd5("path/to/file")
 }
+
